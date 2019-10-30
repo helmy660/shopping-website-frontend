@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Cloth } from '../../cloth.model';
 
 @Component({
   selector: 'app-cloth-item',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ClothItemComponent implements OnInit {
 
-  constructor() { }
+  @Input() clothItem: Cloth;
+  
+  constructor() { 
+  }
 
   ngOnInit() {
   }
+
+  showDetails(event) {
+    console.log(event);
+  }
+
+
 
 }

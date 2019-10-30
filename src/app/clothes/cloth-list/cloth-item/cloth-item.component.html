@@ -1,1 +1,14 @@
-<p>cloth-item works!</p>
+<a 
+    href="#" 
+    class="list-group-item clearfix"
+    (click)="showDetails($event)"
+>
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">Name: {{ clothItem.name }} </h4>
+        <p class="list-group-item-text">Description: {{ clothItem.description }}</p>
+        <p class="list-group-item-text">Price: {{ clothItem.price }}</p>
+    </div>
+    <span class="pull-right">
+        <img [src]="clothItem.imagePath" [alt]="clothItem.name" class="img-responsive" style="max-height: 100px;">
+    </span>
+</a>

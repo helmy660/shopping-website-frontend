@@ -8,16 +8,10 @@
 
 <div class="row">
     <div class="col-xs-12">
-        <a href="#" class="list-group-item clearfix" *ngFor="let cloth of clothes">
-            <div class="pull-left">
-                <h4 class="list-group-item-heading">Name: {{ cloth.name }} </h4>
-                <p class="list-group-item-text">Description: {{ cloth.description }}</p>
-                <p class="list-group-item-text">Price: {{ cloth.price }}</p>
-            </div>
-            <span class="pull-right">
-                <img [src]="cloth.imagePath" [alt]="cloth.name" class="img-responsive" style="max-height: 100px;">
-            </span>
-        </a>
-        <!-- <app-cloth-item></app-cloth-item> -->
+        <app-cloth-item 
+            *ngFor="let cloth of clothes"
+            [clothItem] = "cloth"
+            >
+        </app-cloth-item>
     </div>
 </div>

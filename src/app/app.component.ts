@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'angularProject';
+  feature: string = 'cloth';
+
+  onNavigate(feature) {
+    this.feature = feature;
+  }
 }

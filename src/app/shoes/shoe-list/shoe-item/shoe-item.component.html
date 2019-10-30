@@ -1,1 +1,10 @@
-<p>shoe-item works!</p>
+<a href="#" class="list-group-item clearfix">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">Name: {{ shoeItem.name }} </h4>
+        <p class="list-group-item-text">Description: {{ shoeItem.description }}</p>
+        <p class="list-group-item-text">Price: {{ shoeItem.price }}</p>
+    </div>
+    <span class="pull-right">
+        <img [src]="shoeItem.imagePath" [alt]="shoeItem.name" class="img-responsive" style="max-height: 100px;">
+    </span>
+</a>

@@ -1,12 +1,10 @@
 <div class="container">
     <div class="row">
         <div class="col-md-12">
-            <app-header></app-header>
-            <app-clothes></app-clothes>
-            <hr>
-            <app-shoes></app-shoes>
-            <hr>
-            <app-shopping-list></app-shopping-list>
+            <app-header (featureSelected)="onNavigate($event)"></app-header>
+            <app-clothes *ngIf="feature === 'cloth'"></app-clothes>
+            <app-shoes *ngIf="feature === 'shoe'"></app-shoes>
+            <app-shopping-list *ngIf="feature === 'shopping'"></app-shopping-list>
             <app-footer></app-footer>
         </div>
     </div>
