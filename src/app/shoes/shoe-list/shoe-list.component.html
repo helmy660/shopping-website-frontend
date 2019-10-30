@@ -11,6 +11,7 @@
             <app-shoe-item 
                 *ngFor="let shoe of shoes"
                 [shoeItem]="shoe"
+                (selectedItem)="onShowDetails(shoe)"
                 >
             </app-shoe-item>
         </div>
