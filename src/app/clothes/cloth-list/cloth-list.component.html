@@ -11,6 +11,7 @@
         <app-cloth-item 
             *ngFor="let cloth of clothes"
             [clothItem] = "cloth"
+            (showDetails) = "onShowDetails(cloth)"
             >
         </app-cloth-item>
     </div>

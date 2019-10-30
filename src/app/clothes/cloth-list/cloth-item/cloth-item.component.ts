@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Cloth } from '../../cloth.model';
 
 @Component({
@@ -9,6 +9,7 @@ import { Cloth } from '../../cloth.model';
 export class ClothItemComponent implements OnInit {
 
   @Input() clothItem: Cloth;
+  @Output() showDetails =  new EventEmitter<void>();
   
   constructor() { 
   }
@@ -16,8 +17,8 @@ export class ClothItemComponent implements OnInit {
   ngOnInit() {
   }
 
-  showDetails(event) {
-    console.log(event);
+  showDetailsFunction() {
+    this.showDetails.emit();
   }
 
 

@@ -1,8 +1,12 @@
-<div class="row">
+<div class="row" (itemSelected)="showDetailFunction($event)">
     <div class="col-md-5">
-        <app-cloth-list></app-cloth-list>
+        <app-cloth-list (itemSelected)="item = $event"></app-cloth-list>
     </div>
     <div class="col-md-7">
-        <app-cloth-detail></app-cloth-detail>
+        <app-cloth-detail 
+            *ngIf = "item"
+            [selectedItem]="item"
+        >
+        </app-cloth-detail>
     </div>
 </div>
