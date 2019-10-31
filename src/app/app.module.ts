@@ -17,6 +17,7 @@ import { ShoesComponent } from './shoes/shoes.component';
 import { ShoeListComponent } from './shoes/shoe-list/shoe-list.component';
 import { ShoeDetailComponent } from './shoes/shoe-detail/shoe-detail.component';
 import { ShoeItemComponent } from './shoes/shoe-list/shoe-item/shoe-item.component';
+import { DropdownDirective } from './shared/dropdown/dropdown.directive';
 
 @NgModule({
   declarations: [
@@ -32,7 +33,8 @@ import { ShoeItemComponent } from './shoes/shoe-list/shoe-item/shoe-item.compone
     ShoesComponent,
     ShoeListComponent,
     ShoeDetailComponent,
-    ShoeItemComponent
+    ShoeItemComponent,
+    DropdownDirective
   ],
   imports: [
     BrowserModule,
