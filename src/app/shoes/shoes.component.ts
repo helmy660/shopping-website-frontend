@@ -1,20 +1,23 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Shoe } from './shoe.model';
+import { ShoeService } from './shoe.service';
 
 @Component({
   selector: 'app-shoes',
   templateUrl: './shoes.component.html',
-  styleUrls: ['./shoes.component.css']
+  styleUrls: ['./shoes.component.css'],
+  providers: [ShoeService]
 })
 export class ShoesComponent implements OnInit {
 
   @Input() selectedItem: Shoe;
-  constructor() { }
+  constructor(private shoeService: ShoeService) { }
 
   ngOnInit() {
-  }
-
-  onSelectedItem(event){
-    this.selectedItem = event;
+    this.shoeService.selectedShoe.subscribe(
+      (shoe: Shoe) => {
+        this.selectedItem = shoe;
+      }
+    )
   }
 }

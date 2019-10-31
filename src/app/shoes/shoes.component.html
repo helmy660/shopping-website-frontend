@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col-md-5">
-        <app-shoe-list (shoeItem)="onSelectedItem($event)"></app-shoe-list>
+        <app-shoe-list></app-shoe-list>
     </div>
     <div class="col-md-7">
         <app-shoe-detail *ngIf="selectedItem" [item]="selectedItem"></app-shoe-detail>

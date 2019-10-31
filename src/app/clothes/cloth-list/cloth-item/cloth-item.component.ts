@@ -1,5 +1,6 @@
-import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input} from '@angular/core';
 import { Cloth } from '../../cloth.model';
+import { ClothService } from '../../cloth.service';
 
 @Component({
   selector: 'app-cloth-item',
@@ -9,18 +10,14 @@ import { Cloth } from '../../cloth.model';
 export class ClothItemComponent implements OnInit {
 
   @Input() clothItem: Cloth;
-  @Output() showDetails =  new EventEmitter<void>();
   
-  constructor() { 
+  constructor(private clothService: ClothService) { 
   }
 
   ngOnInit() {
   }
 
   showDetailsFunction() {
-    this.showDetails.emit();
+    this.clothService.selectedCloth.emit(this.clothItem);
   }
-
-
-
 }
