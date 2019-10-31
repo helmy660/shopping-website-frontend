@@ -18,6 +18,7 @@ import { ShoeListComponent } from './shoes/shoe-list/shoe-list.component';
 import { ShoeDetailComponent } from './shoes/shoe-detail/shoe-detail.component';
 import { ShoeItemComponent } from './shoes/shoe-list/shoe-item/shoe-item.component';
 import { DropdownDirective } from './shared/dropdown/dropdown.directive';
+import { ShoppingListService } from './shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -41,8 +42,7 @@ import { DropdownDirective } from './shared/dropdown/dropdown.directive';
     AppRoutingModule,
     FormsModule
   ],
-  providers: [
-  ],
+  providers: [ ShoppingListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
